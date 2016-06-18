@@ -113,7 +113,7 @@ nav a:hover {
 /*------------------------------------*/
 #second-block {
     width:100%;
-    height:400px;
+    height:500px;
     background: #fff;
 }
 #second-block>img {
@@ -128,11 +128,35 @@ nav a:hover {
 #second-block>p {
     letter-spacing: 1px;
     word-spacing: 5px;
-    line-height: 30px;
-    margin: 6% auto 0 auto;
+    line-height: 2;
+    margin: 2% auto 0 auto;
     text-align: center;
     width: 70%;
     font-size: 1.1em;
+}
+/*---------------------------*/
+#third-block {
+    width: 100%;
+    height:500px;
+    background: #eee;
+}
+#third-block>section {
+    width:85%;
+    height:auto;
+    margin: 5% auto 5% auto;
+    padding:0;
+}
+#third-block>section>section {
+    margin: 10% 0 0 3.3%;
+    width: 30%;
+    float: left;
+}
+#third-block>section>section>*{
+    line-height: 1.5;
+}
+#third-block>section>section>p {
+    width:85%;
+    word-spacing: 9px;
 }
 
 
@@ -248,9 +272,7 @@ nav a:hover {
     nav>ul:first-child:before {
         font-size : 1.5em;
     }
-    #second-block>img {
-        margin-left: 45.1%;
-    }
+
     #menu {
         font-size: 2em;
     }
@@ -262,6 +284,29 @@ nav a:hover {
         width: 75%;
         text-align: center;
         font-size:1.4em;
+    }
+    #second-block>img {
+        margin-left: 45.1%;
+    }
+    #second-block h1 {
+        font-size: 1.4em;
+    }
+    #second-block p {
+        text-align: justify;
+        font-size: 0.9em;
+    }
+    #second-block {
+        height: 350px;
+    }
+    #third-block>section p {
+        text-align: justify;
+        font-size: 0.8em;
+    }
+    #third-block img {
+        transform:scale(0.8);
+    }
+    #third-block h3 {
+        font-size: 0.9em;
     }
 }
 @media screen and (max-width: 321px) {
@@ -280,6 +325,7 @@ nav a:hover {
         text-align: justify;
         font-size:1.3em;
     }
+
 }
 @media screen and (min-width: 1023px) {
     nav {
@@ -287,6 +333,11 @@ nav a:hover {
         width:30%;
         padding: 0;
         margin-right: 1%;
+    }
+}
+@media screen and (min-width: 1300px){
+    #second-block>img {
+        margin-left: 48.6%;
     }
 }
 /*--------------*/
