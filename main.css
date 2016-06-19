@@ -4,6 +4,9 @@
     font-family : "Source Sans Pro";
     transition : .3s;
 }
+#menu-check {
+    display: none;
+}
 body {
     margin: 0;
     padding: 0;
@@ -186,7 +189,7 @@ nav a:hover {
 
 
 /*Media Queries */
-@media screen and (min-width: 770px){
+@media screen and (min-width: 1024px){
     #menu {
         display: none;
     }
@@ -194,6 +197,13 @@ nav a:hover {
 @media screen and (max-width: 769px) {
     nav a {
         color:aliceblue;
+    }
+    #menu-check:checked + ul {
+        display: block;
+        width: 100%;
+        height:200px;
+        background: rgba(0,0,0,.8);
+        margin-top: 0.5%;
     }
     #second-block>img {
         margin-left: 47.1%;
@@ -205,14 +215,23 @@ nav a:hover {
     #empty {
         background-color: rgba(0,0,0,.6);
     }
-    nav>ul>li>a {
+    nav>ul {
         display: none;
+        
+    }
+    nav>ul:after {
+        clear: both;
+    }
+    nav>ul>li {
+        float: left;
+        width:100%;
+        margin: 1% 0 1% 0;
     }
     #storyteller {
         text-align: center;
         margin-left:auto;
         margin-right: auto;
-        margin-top:26%;
+        margin-top:30%;
         float:none;
         color:aliceblue;
     }
@@ -251,17 +270,20 @@ nav a:hover {
         float: right;
         line-height:35px;
     }
-    nav>ul:first-child:before {
+    nav:before{
+        margin-left: 4%;
         content:"Unicorn";
-        font-size: 2em;
+        font-size: 3em;
         color:aliceblue;
-        line-height:35px;
+        line-height:50px;
+        display: inline;
     }
     #menu {
         color:aliceblue;
         font-size : 3em;
         margin-right: 30px;
         display: inline;
+        float: right;
     }
 
 }
@@ -269,15 +291,18 @@ nav a:hover {
     #first-block {
         background-position:left;
     }
-    nav>ul:first-child:before {
-        font-size : 1.5em;
+    nav:before {
+        font-size : 2em;
     }
+    #menu-check:checked + ul {
 
+        margin-top: 2.3%;
+    }
     #menu {
-        font-size: 2em;
+        font-size: 3em;
     }
     #storyteller {
-        margin-top:40%;
+        margin-top:60%;
         font-size:0.8em;
     }
     #storyteller>p {
@@ -314,7 +339,7 @@ nav a:hover {
         background-position:left;
     }
     #storyteller {
-        margin-top:40%;
+        margin-top:70%;
         font-size:0.7em;
     }
     #storyteller>hr {
@@ -324,6 +349,9 @@ nav a:hover {
         width: 75%;
         text-align: justify;
         font-size:1.3em;
+    }
+    #menu-check:checked + ul {
+        margin-top: 2.6%;
     }
 
 }
